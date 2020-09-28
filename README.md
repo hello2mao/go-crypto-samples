@@ -20,3 +20,7 @@
 ## ECIES
 
 - use ecc to encrypt and decrypt
+
+## HE-Paillier
+
+- partially homomorphic encryption, additive
