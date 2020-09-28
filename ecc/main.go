@@ -29,6 +29,7 @@ func main() {
 	fmt.Printf("marshalledPubKey: %v\n", hex.EncodeToString(marshalledPubKey))
 
 	// Marshall the public key
-	marshallCompressedPubKey := elliptic.MarshalCompressed(p256, privKey.X, privKey.Y)
-	fmt.Printf("marshallCompressedPubKey: %v\n", hex.EncodeToString(marshallCompressedPubKey))
+	// go version >= 1.15
+	//marshallCompressedPubKey := elliptic.MarshalCompressed(p256, privKey.X, privKey.Y)
+	//fmt.Printf("marshallCompressedPubKey: %v\n", hex.EncodeToString(marshallCompressedPubKey))
 }

@@ -41,17 +41,18 @@ func main() {
 	}
 
 	// way-2
-	{
-		signature, err := ecdsa.SignASN1(rand.Reader, privKey, hashedData[:])
-		if err != nil {
-			fmt.Printf("ecdsa.SignASN1 err: %v\n", err)
-			os.Exit(-1)
-		}
-		if !ecdsa.VerifyASN1(&privKey.PublicKey, hashedData[:], signature) {
-			fmt.Printf("ecdsa.Verify failed\n")
-			os.Exit(-1)
-		}
-		fmt.Printf("[2]sign and verify success\n")
-	}
+	// go version >= 1.15
+	//{
+	//	signature, err := ecdsa.SignASN1(rand.Reader, privKey, hashedData[:])
+	//	if err != nil {
+	//		fmt.Printf("ecdsa.SignASN1 err: %v\n", err)
+	//		os.Exit(-1)
+	//	}
+	//	if !ecdsa.VerifyASN1(&privKey.PublicKey, hashedData[:], signature) {
+	//		fmt.Printf("ecdsa.Verify failed\n")
+	//		os.Exit(-1)
+	//	}
+	//	fmt.Printf("[2]sign and verify success\n")
+	//}
 
 }
