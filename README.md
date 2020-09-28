@@ -16,3 +16,7 @@
 ## ECDSA
 
 - sign and verify
+
+## ECIES
+
+- use ecc to encrypt and decrypt
