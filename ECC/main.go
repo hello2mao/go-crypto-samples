@@ -178,7 +178,7 @@ func main() {
 		os.Exit(-1)
 	}
 	if !decodedPubKey.Equal(&privKey.PublicKey) {
-		fmt.Printf("ecc encode and decode failed")
+		fmt.Printf("ECC encode and decode failed")
 		os.Exit(-1)
 	}
 
