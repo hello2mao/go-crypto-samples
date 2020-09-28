@@ -43,7 +43,7 @@ func PaddedBigBytes(bigint *big.Int, n int) []byte {
 	return ret
 }
 
-// 私钥 -> []byte
+// PrivKey -> []byte
 // FromECDSA exports a private key into a binary dump.
 func FromECDSA(priv *ecdsa.PrivateKey) []byte {
 	if priv == nil {
@@ -52,7 +52,7 @@ func FromECDSA(priv *ecdsa.PrivateKey) []byte {
 	return PaddedBigBytes(priv.D, priv.Params().BitSize/8)
 }
 
-// []byte -> 私钥
+// []byte -> PrivKey
 // ToECDSA creates a private key with the given D value.
 func ToECDSA(d []byte) (*ecdsa.PrivateKey, error) {
 	return toECDSA(d, true)
@@ -85,7 +85,7 @@ func toECDSA(d []byte, strict bool) (*ecdsa.PrivateKey, error) {
 	return priv, nil
 }
 
-// 公钥 -> []byte
+// PubKey -> []byte
 func FromECDSAPub(pub *ecdsa.PublicKey) []byte {
 	if pub == nil || pub.X == nil || pub.Y == nil {
 		return nil
@@ -93,7 +93,7 @@ func FromECDSAPub(pub *ecdsa.PublicKey) []byte {
 	return elliptic.Marshal(elliptic.P256(), pub.X, pub.Y)
 }
 
-// []byte -> 公钥
+// []byte -> PubKey
 func ToECDSAPub(pub []byte) *ecdsa.PublicKey {
 	if len(pub) == 0 {
 		return nil
