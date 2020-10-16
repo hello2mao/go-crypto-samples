@@ -24,3 +24,7 @@
 ## HE-Paillier
 
 - partially homomorphic encryption, additive
+
+## Differential-Privacy
+
+- example using the Google go differential privacy library
