@@ -28,3 +28,6 @@
 ## Differential-Privacy
 
 - example using the Google go differential privacy library
+
+## Secret-Sharing
+- shamir's secret sharing algorithm
