@@ -35,3 +35,6 @@
 ## SM
 - 国密
 
+## FPE
+- Format Preserving Encryption
+
